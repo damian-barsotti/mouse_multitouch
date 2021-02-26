@@ -1,5 +1,5 @@
 # Mouse multitouch
-Bash script to emulate multitouch mouse click. Usefull as Minecraft hack.
+Bash script to emulate multitouch mouse click. Useful as Minecraft hack.
 
 ## Requirements
 - Linux system with:
