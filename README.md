@@ -9,7 +9,7 @@ Bash script to emulate multitouch mouse click. Useful as Minecraft hack.
 
 ## Usage
 ```
-multitouch <delay> <cant> [<button>] [<act_button>] 
+multitouch.sh <delay> <cant> [<button>] [<act_button>] 
 ```
 - `<delay>`: delay between clicks in ms.
 - `<cant>`: number of clicks.
@@ -21,6 +21,6 @@ Mouse buttons are referenced by numbers: left mouse is 1, middle is 2, right is 
 
 ### Example
 ```sh
-./multitouch 10 100 1 2
+./multitouch.sh 10 100 1 2
 ```
 When press middle button, left button 1 is clicked 100 times in a second.
