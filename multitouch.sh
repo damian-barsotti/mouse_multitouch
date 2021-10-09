@@ -26,7 +26,10 @@ DELAY=$1
 
 CANT=$2
 
-MOUSE_ID=$(xinput --list | grep -i -m 1 $MOUSE | grep -o 'id=[0-9]\+' | grep -o '[0-9]\+')
+MOUSE_LINE=$(xinput --list | grep -i -m 1 $MOUSE)
+MOUSE_ID=$(echo "$MOUSE_LINE" | grep -o 'id=[0-9]\+' | grep -o '[0-9]\+')
+
+echo Mouse: $MOUSE_LINE
 
 STATE1=$(xinput --query-state $MOUSE_ID | grep 'button\[' | sort)
 while true; do
