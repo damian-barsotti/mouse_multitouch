@@ -2,6 +2,21 @@
 
 #set -x
 
+echoerr() { echo "$@" 1>&2; }
+
+prog_exists() {
+    if ! command -v $1 &> /dev/null
+    then
+        echoerr $1 cannot be found
+        exit 1
+    fi
+}
+
+for prg in xinput xdotool
+do
+    prog_exists $prg
+done
+
 MOUSE="mouse"
 #MOUSE="touch"
 BUTTON=${3:-1}
